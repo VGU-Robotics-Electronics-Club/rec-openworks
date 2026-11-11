@@ -1,0 +1,9 @@
+---
+layout: default
+title: Engineering knowledge
+lede: Tutorials, project documentation, technical notes, articles, and educational media—from the same maintainable collection as the archive.
+kicker: ENGINEERING KNOWLEDGE
+permalink: /knowledge/
+---
+{% assign knowledge_categories = 'article,project,tutorial,video,report' | split: ',' %}
+<section class="knowledge-list"><h2>Useful knowledge, <em>made legible.</em></h2><p>These records demonstrate how practical materials can live beside early-stage research without being presented as a formal journal.</p><div class="archive-head"><span>WORK / TITLE</span><span>DISCIPLINE</span><span>YEAR</span><span></span></div><div class="archive-list">{% assign knowledge = site.works | where_exp: 'work', 'knowledge_categories contains work.category' | sort: 'date' | reverse %}{% for work in knowledge %}{% include work-row.html work=work %}{% endfor %}</div></section>

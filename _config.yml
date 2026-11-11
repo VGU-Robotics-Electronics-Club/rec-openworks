@@ -1,0 +1,32 @@
+title: REC OpenWorks
+description: A student-led engineering knowledge archive by VGU Robotics & Electronics Club.
+url: "vgu-robotics-electronics-club.github.io"
+baseurl: ""
+lang: en
+timezone: Asia/Ho_Chi_Minh
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+# The github-pages gem otherwise selects Primer as a default theme. This site
+# supplies its own plain CSS and must not compile a theme SCSS entry point.
+theme: null
+collections:
+  works:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: works
+    values:
+      layout: work
+      image: /assets/images/og-placeholder.svg
+      demo: true
+  - scope:
+      path: ""
+    values:
+      layout: page
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tools

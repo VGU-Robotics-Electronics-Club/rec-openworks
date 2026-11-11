@@ -1,0 +1,18 @@
+- id: research
+  label: Research
+  description: Early-stage preprints and investigations.
+- id: report
+  label: Reports
+  description: Tested technical decisions and field notes.
+- id: article
+  label: Articles
+  description: Clear engineering explanations.
+- id: project
+  label: Projects
+  description: Build documentation and iterations.
+- id: tutorial
+  label: Tutorials
+  description: Reproducible learning resources.
+- id: video
+  label: Video
+  description: Technical demonstrations and walkthroughs.

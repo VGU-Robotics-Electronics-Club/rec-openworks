@@ -1,0 +1,11 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="announcement"><span class="announce-dot"></span><span>OPEN KNOWLEDGE ARCHIVE</span><span class="announcement-line"></span><span>Student-led research &amp; engineering initiative</span><span class="announcement-right">VGU / REC</span></div>
+<header class="site-header">
+  {% include brand.html %}
+  <button class="mobile-nav-toggle" id="mobileNavToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+    {% for item in site.data.navigation %}<a class="nav-link" href="{{ item.url | relative_url }}">{{ item.label }}</a>{% endfor %}
+    <a class="nav-cta" href="{{ '/submit/' | relative_url }}">Submit a work <span aria-hidden="true">↗</span></a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Toggle colour theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M19.07 4.93l-1.42 1.42m-11.3 11.3-1.42 1.42"/></svg></button>
+  </nav>
+</header>

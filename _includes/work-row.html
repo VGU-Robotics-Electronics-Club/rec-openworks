@@ -1,0 +1,5 @@
+{% capture author_names %}{% for author in include.work.authors %}{% if author.name %}{{ author.name }}{% else %}{{ author }}{% endif %}{% unless forloop.last %} · {% endunless %}{% endfor %}{% endcapture %}
+<a class="archive-row" href="{{ include.work.url | relative_url }}" data-work data-category="{{ include.work.category }}" data-search="{{ include.work.title | escape }} {{ author_names | strip | escape }} {{ include.work.keywords | join: ' ' | escape }} {{ include.work.field | escape }}">
+  <span class="work-primary">{% if include.work.cover %}<img class="work-thumbnail" src="{{ include.work.url | append: include.work.cover | relative_url }}" alt="" width="56" height="56">{% endif %}<span><span class="work-type">{{ include.work.category | upcase }} / {{ include.work.status }}</span><span class="work-title">{{ include.work.title }}</span><span class="work-author">{{ author_names | strip }}</span></span></span>
+  <span class="work-field">{{ include.work.field }}</span><time class="work-year" datetime="{{ include.work.date | date_to_xmlschema }}">{{ include.work.date | date: '%Y' }}</time><span class="work-arrow" aria-hidden="true">↗</span>
+</a>

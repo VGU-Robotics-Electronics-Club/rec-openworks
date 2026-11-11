@@ -1,7 +1,7 @@
 title: REC OpenWorks
 description: A student-led engineering knowledge archive by VGU Robotics & Electronics Club.
 url: "vgu-robotics-electronics-club.github.io"
-baseurl: ""
+baseurl: "rec-openworks"
 lang: en
 timezone: Asia/Ho_Chi_Minh
 markdown: kramdown
